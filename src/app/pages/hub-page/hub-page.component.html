@@ -1,13 +1,18 @@
 <div>
-    <!-- Componente de filtro -->
-    <app-filter (search)="onSearch($event)"></app-filter>
-  
-    <!-- Mostrar las aplicaciones filtradas -->
-    <div class="cards-container">
-      <app-card *ngFor="let app of filteredApps" 
-                [image]="app.image" 
-                [title]="app.title" 
-                [description]="app.description">
-      </app-card>
-    </div>
-</div>  
+  <!-- Componente de filtro -->
+  <app-filter (search)="onSearch($event)"></app-filter>
+
+  <!-- Mostrar las aplicaciones filtradas -->
+  <div class="cards-container" *ngIf="filteredApps.length > 0; else noResults">
+    <app-card *ngFor="let app of filteredApps" 
+              [image]="app.image" 
+              [title]="app.title" 
+              [description]="app.description">
+    </app-card>
+  </div>
+
+  <!-- Mensaje de no resultados -->
+  <ng-template #noResults>
+    <p class="no-results-message">No se encontraron aplicaciones con ese nombre.</p>
+  </ng-template>
+</div>
