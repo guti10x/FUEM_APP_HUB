@@ -1,63 +1,90 @@
 /* Footer Principal */
 .footer {
     background-color: #0d0d0d;
-    color: #e6e6e6;           
-    padding: 15px 10px;
+    color: #e6e6e6;
     font-family: Arial, sans-serif;
     font-size: 14px;
     line-height: 1.5;
     text-align: center; 
+    border-top: red 1px solid;
 }
 
 /* Contenedor principal */
 .footer-content {
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    gap: 25px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 110px;
     max-width: 1200px;
-    margin: auto;
+    margin: 0;
+}
+
+.img_links{
+    display: flex;
+    flex-direction: row;
+
 }
 
 /* Logo */
 .footer-logo-container {
-    flex-shrink: 0; 
+    flex-shrink: 0;
 }
 
 .footer-logo {
-    width: 70px;
-    height: auto;
+    width: 90px;
+    height: 85px;
 }
 
 /* Textos */
 .footer-text-container {
-    text-align: left; 
-}
-
-.footer-contact {
-    margin: 0;
-}
-
-.footer-link {
-    color: #e22a2a;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.footer-link:hover {
-    text-decoration: underline;
+    text-align: left;
 }
 
 .footer-copyright {
-    margin: 5px 0 0 0;
-    font-size: 12px;
+    font-size: 10px;
     color: #aaaaaa;
+    padding-bottom: -10px;
 }
 
-/* Responsividad */
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    padding-left: -10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    a {
+        display: flex;
+        flex-direction: row;
+        gap: 7px;
+        text-decoration: none;
+        span{
+            margin-top: 12px;
+        }
+        p{
+            color: #e6e6e6;
+            font-size: 12px;
+        }
+    }
+}
+
+.mail-container{
+    margin-bottom: -10px;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 20;
+    font-size: 1rem;
+    color: #e6e6e6;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
     .footer-content {
-        flex-direction: column; 
+        flex-direction: column;
         text-align: center;
     }
 

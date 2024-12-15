@@ -1,4 +1,8 @@
+/* Estilos del header */
 .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     background-color: #0d0d0d;
     color: #ffffff;
     text-align: center;
@@ -12,61 +16,11 @@
     align-items: center;
     max-width: 1200px;
     margin: 0;
-    padding: 0;
+    padding-top: 15px;
+    padding-bottom: 13px;
 }
 
-h3 {
-    font-size: 30px;
-    margin: 0;
-    margin-top: 10px;
-    margin-left: 10px;
-}
-
-.material-symbols-outlined {
-    font-variation-settings:
-        'FILL' 0,
-        'wght' 200,
-        'GRAD' 0,
-        'opsz' 21;
-    color: #ffffff;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.nav-links li {
-    margin: 0 15px;
-    margin-top: 20px;
-    padding-top: 10px;
-
-    a {
-        display: flex;
-        flex-direction: row;
-        gap: 4px;
-
-        span {
-            margin-top: 5px;
-        }
-    }
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #e6e6e6;
-    font-size: 11px;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: #e22a2a;
-}
-
+/* Estilos del logo */
 .nav-logo {
     display: flex;
     flex-direction: row;
@@ -79,8 +33,34 @@ h3 {
     height: auto;
 }
 
+/* Estilos del texto h3 */
+h3 {
+    font-size: 30px;
+    margin:0;
+    margin-top: 18px;
+    margin-left: 9px;
+}
+
+.actions{
+    display: flex;
+    flex-direction: column;
+    gap: 10px ;
+    padding-top: 17px;
+    padding-right: 16px;
+}
+
+/* Estilos del ícono */
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 20;
+}
+
+/* Responsividad */
 @media (max-width: 768px) {
-    .nav-logo{
+    .nav-logo {
         gap: 9px;
     }
     
@@ -90,24 +70,6 @@ h3 {
     }
 
     h3 {
-        margin: 0;
         font-size: 18px;
-    }
-
-    .nav-links li {
-        margin: 0 15px;
-        margin-left: 60px;
-
-        a {
-            gap: 1px;
-
-            span {
-                margin-top: 5px;
-            }
-
-            p {
-                font-size: 10px;
-            }
-        }
     }
 }
