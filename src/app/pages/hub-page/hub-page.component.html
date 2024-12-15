@@ -1,3 +1,4 @@
+<app-filter (search)="onSearch($event)"></app-filter>
 <div class="cards-container">
     <app-card *ngFor="let app of apps" [image]="app.image" [title]="app.title" [description]="app.description">
     </app-card>
