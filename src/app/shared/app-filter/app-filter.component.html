@@ -1,13 +1,12 @@
-<div class="filter-container">
-    <form (submit)="onSearch()">
-      <input 
-        type="text" 
-        id="search" 
-        [(ngModel)]="searchText" 
-        name="searchText" 
-        placeholder="Escribe el nombre de la aplicación"
-        class="search-input"
-      />
-      <button type="submit" class="search-button">Buscar</button>
-    </form>
-</div>  
+<div class="filter-container" style="position: relative;">
+  <div>
+    <!--<span class="material-symbols-outlined search-icon" style="margin-right: -55px; ">search</span>-->
+    <input 
+      type="text" 
+      [(ngModel)]="searchText" 
+      (ngModelChange)="onSearch()"
+      placeholder="Buscar aplicación"
+      class="search-input"
+    />
+  </div>
+</div>

@@ -11,13 +11,20 @@ export class HubPageComponent {
     { image: 'path_to_image_2.jpg', title: 'App 2', description: 'Descripción de la app 2' },
   ];
 
-  filteredApplications = this.apps;
-  
-  // Método para buscar el input buscado en la lista de aplicaciones
-  onSearch(searchText: string) {
-    this.filteredApplications = this.apps.filter(app =>
-      app.title.toLowerCase().includes(searchText.toLowerCase())
-    );
-  }
+  // Aplicaciones que coinciden con el input filtrado
+  filteredApps = this.apps;
 
+  // Método para actualizar las aplicaciones filtradas en función del texto de búsqueda
+  onSearch(searchText: string) {
+
+    const input = searchText.toLowerCase();
+  
+    this.filteredApps = this.apps.filter(app => {
+      const normalizedTitle = app.title.toLowerCase();
+      console.log('normalizedTitle:', normalizedTitle);
+
+      // Comprobar si el título empieza con el texto de búsqueda
+      return normalizedTitle.startsWith(input);
+    });
+  }
 }

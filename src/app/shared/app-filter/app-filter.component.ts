@@ -6,12 +6,13 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrl: './app-filter.component.scss'
 })
 export class AppFilterComponent {
-  // input app a buscar
-  searchText: string = '';  
+  // Input introducido
+  searchText: string = '';
 
-  // Emite el texto de búsqueda al componente padre
-  @Output() search = new EventEmitter<string>(); 
+  // Enviar el input de búsqueda al padre cada vez q se modifica el input
+  @Output() search: EventEmitter<string> = new EventEmitter<string>();
 
+  // Detecta cambios en el input y emite el nuevo valor
   onSearch() {
     this.search.emit(this.searchText);  
   }

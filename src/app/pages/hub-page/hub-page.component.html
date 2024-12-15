@@ -1,5 +1,13 @@
-<app-filter (search)="onSearch($event)"></app-filter>
-<div class="cards-container">
-    <app-card *ngFor="let app of apps" [image]="app.image" [title]="app.title" [description]="app.description">
-    </app-card>
-</div>
+<div>
+    <!-- Componente de filtro -->
+    <app-filter (search)="onSearch($event)"></app-filter>
+  
+    <!-- Mostrar las aplicaciones filtradas -->
+    <div class="cards-container">
+      <app-card *ngFor="let app of filteredApps" 
+                [image]="app.image" 
+                [title]="app.title" 
+                [description]="app.description">
+      </app-card>
+    </div>
+</div>  
