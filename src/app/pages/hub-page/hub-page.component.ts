@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class HubPageComponent {
   apps = [
     { image: '../../../assets/csv_data_plotter_app_icon.png', title: 'CSV data plotter app', description: 'Aplicación para analizar, visualizar y exportar los datos almacenados en la SD de Nexus' },
-    { image: 'path_to_image_2.jpg', title: 'App 2', description: 'Descripción de la app 2' },
+    { image: '../../../assets/app2.png', title: 'App 2', description: 'Descripción de la app 2' },
   ];
 
   // Aplicaciones que coinciden con el input filtrado
