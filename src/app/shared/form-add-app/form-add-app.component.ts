@@ -9,7 +9,7 @@ export class FormAddAppComponent {
 
   isModalOpen = false;
 
-  // Añadir la firma de índice para permitir el acceso dinámico a las propiedades
+  // Form variables inputs
   formData: { [key: string]: string } = {
     name: '',
     description: '',
@@ -18,7 +18,7 @@ export class FormAddAppComponent {
     email: ''
   };
 
-  // Definir los campos del formulario
+  // Campos del formulario
   formFields = [
     { label: 'Tu nombre', name: 'userName', type: 'text' },
     { label: 'Tu Correo electrónico', name: 'email', type: 'email' },
@@ -39,7 +39,40 @@ export class FormAddAppComponent {
 
   // Función para enviar el formulario
   submitForm(): void {
-    console.log(this.formData);
+    
+    const { name, description, department, userName, email } = this.formData;
+  
+    // Comprobar si todos los campos están inicializados (no vacíos)
+    if (!name || !description || !department || !userName || !email) {
+      alert('Por favor, rellena todos los campos.');
+      return;
+    }
+  
+    // Validar el formato del correo electrónico
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@formulauem\.es$/;
+    if (!emailRegex.test(email)) {
+      alert('El correo electrónico debe tener el formato correcto y ser de dominio @formulauem.es.');
+      return;
+    }
+  
+    // Crear el asunto y el cuerpo del correo
+    const subject = 'Sugerencia de nueva aplicación';
+    const body = `
+      Nombre de la aplicación: ${name}\n
+      Descripción: ${description}\n
+      Departamento: ${department}\n
+      Nombre: ${userName}\n
+      Correo electrónico: ${email}
+    `;
+  
+    // Crear el enlace mailto con los datos del formulario
+    const mailtoLink = `mailto:daniel.gutierrez@formulauem.es?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  
+    // Abrir el cliente de correo con los campos predefinidos
+    window.location.href = mailtoLink;
+  
+    // Cerrar el modal después de enviar el formulario
     this.closeModal();
-  }
+  }  
+  
 }
