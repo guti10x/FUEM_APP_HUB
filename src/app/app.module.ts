@@ -11,6 +11,8 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { AppFilterComponent } from './shared/app-filter/app-filter.component';
 import { FormAddAppComponent } from './shared/form-add-app/form-add-app.component';
+import { CsvDataPlotterAppPageComponent } from './pages/csv-data-plotter-app-page/csv-data-plotter-app-page.component';
+import { CodeAssmblerAppPageComponent } from './pages/code-assmbler-app-page/code-assmbler-app-page.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { FormAddAppComponent } from './shared/form-add-app/form-add-app.componen
     HeaderComponent,
     FooterComponent,
     AppFilterComponent,
-    FormAddAppComponent
+    FormAddAppComponent,
+    CsvDataPlotterAppPageComponent,
+    CodeAssmblerAppPageComponent
   ],
   imports: [
     BrowserModule,

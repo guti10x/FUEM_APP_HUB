@@ -11,13 +11,15 @@ router-outlet {
 }
 
 app-footer {
-    height: 60px;
     width: 100%;
-    position: relative;
-    margin-top: auto; 
+    position: fixed;
+    bottom: 0; 
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
 }
 
-header {
+app-header {
     height: 60px; 
     width: 100%;
 }
