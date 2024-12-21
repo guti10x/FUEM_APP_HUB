@@ -9,4 +9,5 @@ export class AppCardComponent {
   @Input() image: string = '';
   @Input() title: string = '';
   @Input() description: string = '';
+  @Input() navigation: string = '';
 }

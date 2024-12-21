@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 export class HubPageComponent {
   apps = [
-    { image: '../../../assets/csv_data_plotter_app_icon.png', title: 'Nexus CSV data plotter', description: 'Aplicación para analizar, visualizar y exportar los datos recopilados por la memoria SD de Nexus' },
-    { image: '../../../assets/CodeAssembler.png', title: 'CodeAssembler', description: 'Aplicación para gestionar y rastrear sistemas y ensamblajes de piezas.' },
+    { image: '../../../assets/csv_data_plotter_app_icon.png', title: 'Nexus CSV data plotter', description: 'Aplicación para analizar, visualizar y exportar los datos recopilados por la memoria SD de Nexus', navigation:'/NexusCSVDataPlotterApp'},
+    { image: '../../../assets/CodeAssembler.png', title: 'CodeAssembler', description: 'Aplicación para gestionar y rastrear sistemas y ensamblajes de piezas.' , navigation:'/CodeAssemblerApp'},
   ];
 
   // Aplicaciones que coinciden con el input filtrado

@@ -1,7 +1,7 @@
-<div class="card">
-    <img [src]="image" alt="{{ title }}" class="card-img" />
-    <div class="card-info">
-        <h3 class="card-title">{{ title }}</h3>
-        <p class="card-description">{{ description }}</p>
-    </div>
+<div class="card" [routerLink]="navigation">
+  <img [src]="image" alt="{{ title }}" class="card-img" />
+  <div class="card-info">
+    <h3 class="card-title">{{ title }}</h3>
+    <p class="card-description">{{ description }}</p>
+  </div>
 </div>
