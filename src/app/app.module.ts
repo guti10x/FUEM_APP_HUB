@@ -10,6 +10,7 @@ import { AppCardComponent } from './shared/app-card/app-card.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { AppFilterComponent } from './shared/app-filter/app-filter.component';
+import { FormAddAppComponent } from './shared/form-add-app/form-add-app.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AppFilterComponent } from './shared/app-filter/app-filter.component';
     AppCardComponent,
     HeaderComponent,
     FooterComponent,
-    AppFilterComponent
+    AppFilterComponent,
+    FormAddAppComponent
   ],
   imports: [
     BrowserModule,

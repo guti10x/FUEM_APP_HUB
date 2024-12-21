@@ -1,0 +1,40 @@
+<!-- Enlace que activa el modal -->
+<div class="suggest-link-container">
+    <a href="#" (click)="openModal($event)" class="suggest-link">Sugerir una nueva aplicación</a>
+  </div>
+  
+  <!-- Modal -->
+  <div class="modal-backdrop" *ngIf="isModalOpen">
+    <div class="modal-content">
+      <form (ngSubmit)="submitForm()">
+        <div class="title_modal">
+            <h3>Sugerir una nueva aplicación</h3>
+            <button type="button" class="btn-cancel" (click)="closeModal()">X</button>
+        </div>
+        
+        <!-- Campos del formulario generados con ngFor -->
+        <div *ngFor="let field of formFields">
+          <label [for]="field.name">
+            {{ field.label }}:
+            <input 
+              [type]="field.type" 
+              [(ngModel)]="formData[field.name]" 
+              [name]="field.name" 
+              [id]="field.name" 
+              required />
+          </label>
+        </div>
+  
+        <!-- Campo de descripción como textarea -->
+        <label for="description">
+          Descripción de la aplicación:
+          <textarea [(ngModel)]="formData['description']" name="description" id="description" required rows="4" cols="50"></textarea>
+        </label>
+  
+        <div class="modal-actions">
+          <button type="submit" class="btn-submit">Mandar sugerencia</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
