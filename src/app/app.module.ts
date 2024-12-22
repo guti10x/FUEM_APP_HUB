@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
@@ -13,6 +15,7 @@ import { AppFilterComponent } from './shared/app-filter/app-filter.component';
 import { FormAddAppComponent } from './shared/form-add-app/form-add-app.component';
 import { CsvDataPlotterAppPageComponent } from './pages/csv-data-plotter-app-page/csv-data-plotter-app-page.component';
 import { CodeAssmblerAppPageComponent } from './pages/code-assmbler-app-page/code-assmbler-app-page.component';
+import { TableComponent } from './shared/table/table.component';
 
 @NgModule({
   declarations: [
@@ -24,12 +27,14 @@ import { CodeAssmblerAppPageComponent } from './pages/code-assmbler-app-page/cod
     AppFilterComponent,
     FormAddAppComponent,
     CsvDataPlotterAppPageComponent,
-    CodeAssmblerAppPageComponent
+    CodeAssmblerAppPageComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [
     provideClientHydration()
