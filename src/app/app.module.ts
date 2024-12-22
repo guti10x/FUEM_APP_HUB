@@ -16,6 +16,7 @@ import { FormAddAppComponent } from './shared/form-add-app/form-add-app.componen
 import { CsvDataPlotterAppPageComponent } from './pages/csv-data-plotter-app-page/csv-data-plotter-app-page.component';
 import { CodeAssmblerAppPageComponent } from './pages/code-assmbler-app-page/code-assmbler-app-page.component';
 import { TableComponent } from './shared/table/table.component';
+import { FiltoTablaComponent } from './shared/filto-tabla/filto-tabla.component';
 
 @NgModule({
   declarations: [
@@ -28,13 +29,14 @@ import { TableComponent } from './shared/table/table.component';
     FormAddAppComponent,
     CsvDataPlotterAppPageComponent,
     CodeAssmblerAppPageComponent,
-    TableComponent
+    TableComponent,
+    FiltoTablaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    NgbModule
+    NgbModule,
   ],
   providers: [
     provideClientHydration()

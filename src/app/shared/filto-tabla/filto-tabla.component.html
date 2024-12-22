@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col" *ngFor="let dropdown of dropdowns; let i = index">
+      <div ngbDropdown class="d-inline-block">
+        <button type="button" class="btn btn-outline-primary" [id]="'dropdown' + i" ngbDropdownToggle>
+          {{dropdown.title}}
+        </button>
+        <div ngbDropdownMenu [attr.aria-labelledby]="'dropdown' + i">
+          <button ngbDropdownItem *ngFor="let item of dropdown.items">{{item}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -91,6 +91,7 @@ const COUNTRIES: Country[] = [
 		population: 1409517397,
 	},
 ];
+
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
@@ -98,7 +99,7 @@ const COUNTRIES: Country[] = [
 })
 
 export class TableComponent {
-  page = 1;
+ 	page = 1;
 	pageSize = 4;
 	collectionSize = COUNTRIES.length;
 	countries!: Country[];

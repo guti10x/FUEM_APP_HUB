@@ -1,0 +1,12 @@
+<div class="filter-container" style="position: relative;">
+  <div>
+    <!--<span class="material-symbols-outlined search-icon" style="margin-right: -55px; ">search</span>-->
+    <input 
+      type="text" 
+      [(ngModel)]="searchText" 
+      (ngModelChange)="onSearch()"
+      placeholder="Buscar aplicación"
+      class="search-input"
+    />
+  </div>
+</div>
